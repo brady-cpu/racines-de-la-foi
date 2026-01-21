@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Racines de la Foi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="app-title" id="secret-admin-button">
+      Racines de la Foi
+    </div>
+
+    <nav class="app-nav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="calendrier.html">Calendrier</a>
+      <a href="defis.html">Défis</a>
+      <a href="classement.html">Classement</a>
+    </nav>
+  </header>
+
+  <!-- PAGE -->
+  <main class="page">
+    <h1>Question du jour</h1>
+    <p class="subtitle">Une question pour nourrir ton voyage.</p>
+
+    <div id="question-du-jour" class="question-box">
+      Chargement de la question...
+    </div>
+
+    <button class="btn" onclick="chargerQuestion()">Actualiser</button>
+  </main>
+
+</body>
+</html>

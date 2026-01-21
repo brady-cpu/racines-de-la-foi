@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Classement — Racines de la Foi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="app-title">Racines de la Foi</div>
+
+    <nav class="app-nav">
+      <a href="index.html">Accueil</a>
+      <a href="calendrier.html">Calendrier</a>
+      <a href="defis.html">Défis</a>
+      <a href="classement.html" class="active">Classement</a>
+    </nav>
+  </header>
+
+  <!-- PAGE -->
+  <main class="page">
+    <h1>Classement</h1>
+    <p class="subtitle">Classement mis à jour depuis le fichier <code>data/classement.json</code>.</p>
+
+    <div id="classement-container" class="classement-box">
+      Chargement du classement...
+    </div>
+
+    <button class="btn" onclick="chargerClassement()">Actualiser</button>
+  </main>
+
+</body>
+</html>

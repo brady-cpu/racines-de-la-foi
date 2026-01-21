@@ -1,0 +1,235 @@
+/* ============================= */
+/*        PALETTE COULEURS       */
+/* ============================= */
+:root {
+  --bleu-nuit: #05081a;
+  --bleu-nuit-soft: #0a1028;
+  --or: #d4af37;
+  --or-soft: #f3e2a9;
+  --texte: #f5f5f5;
+  --texte-muted: #c7c7c7;
+}
+
+/* ============================= */
+/*        RESET GLOBAL           */
+/* ============================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #111633 0%, var(--bleu-nuit) 55%, #02030a 100%);
+  color: var(--texte);
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+.app-header {
+  background: #05081a;
+  border-bottom: 1px solid rgba(212,175,55,0.4);
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.app-title {
+  font-family: "Playfair Display", serif;
+  color: var(--or-soft);
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer; /* pour le bouton secret admin */
+}
+
+.app-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.app-nav a {
+  color: var(--texte-muted);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+}
+
+.app-nav a.active {
+  border-color: rgba(212,175,55,0.7);
+  color: var(--or-soft);
+}
+
+/* ============================= */
+/*             PAGE              */
+/* ============================= */
+.page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px 16px;
+  background: linear-gradient(145deg, #05081a 0%, #090f27 50%, #05081a 100%);
+  border-radius: 18px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  color: var(--or-soft);
+  margin-top: 0;
+}
+
+.subtitle {
+  color: var(--or);
+  margin-bottom: 16px;
+}
+
+/* ============================= */
+/*       BLOCS DE CONTENU        */
+/* ============================= */
+.question-box,
+.classement-box {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: radial-gradient(circle at top left, rgba(212,175,55,0.12), transparent 60%);
+  margin-bottom: 16px;
+}
+
+/* ============================= */
+/*            BOUTONS            */
+/* ============================= */
+.btn {
+  background: var(--or);
+  color: #05081a;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--or-soft);
+}
+
+/* ============================= */
+/*         CALENDRIER            */
+/* ============================= */
+.week {
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.03);
+}
+
+.week-header {
+  margin-bottom: 12px;
+}
+
+.week-title {
+  font-size: 1.2rem;
+  color: var(--or-soft);
+  font-family: "Playfair Display", serif;
+}
+
+.week-subtitle {
+  color: var(--texte-muted);
+  font-size: 0.9rem;
+}
+
+.day-line {
+  margin: 6px 0;
+}
+
+.day-label {
+  color: var(--or);
+  font-weight: bold;
+}
+
+.challenge-tag {
+  background: rgba(212,175,55,0.2);
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 6px;
+  font-size: 0.8rem;
+  color: var(--or-soft);
+}
+
+.week-thought {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(212,175,55,0.3);
+  color: var(--or-soft);
+}
+
+/* ============================= */
+/*            DÉFIS              */
+/* ============================= */
+.challenge-explanation {
+  border: 1px solid rgba(212,175,55,0.3);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: rgba(255,255,255,0.03);
+}
+
+.challenge-name {
+  font-size: 1.1rem;
+  color: var(--or-soft);
+  font-family: "Playfair Display", serif;
+}
+
+.challenge-subtitle {
+  color: var(--or);
+  margin-bottom: 8px;
+}
+
+/* ============================= */
+/*            ADMIN              */
+/* ============================= */
+.admin-section {
+  border: 1px solid rgba(212,175,55,0.3);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  background: rgba(255,255,255,0.03);
+}
+
+.admin-input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: #0a1028;
+  color: var(--texte);
+}
+
+.admin-player-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-player-row input {
+  flex: 1;
+}
+
+.admin-delete-btn {
+  background: #8b0000;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-delete-btn:hover {
+  background: #b30000;
+}

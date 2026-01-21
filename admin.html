@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Administration — Racines de la Foi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="app-title">Administration</div>
+
+    <nav class="app-nav">
+      <a href="index.html">Accueil</a>
+      <a href="calendrier.html">Calendrier</a>
+      <a href="defis.html">Défis</a>
+      <a href="classement.html">Classement</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <!-- PAGE -->
+  <main class="page">
+    <h1>Panneau d’administration</h1>
+    <p class="subtitle">Modifie les données de l’application ici.</p>
+
+    <!-- ========================= -->
+    <!--   QUESTION DU JOUR        -->
+    <!-- ========================= -->
+    <section class="admin-section">
+      <h2>Question du jour</h2>
+      <textarea id="admin-question" class="admin-input" rows="3"></textarea>
+      <button class="btn" onclick="adminSaveQuestion()">Enregistrer la question</button>
+    </section>
+
+    <!-- ========================= -->
+    <!--   CLASSEMENT              -->
+    <!-- ========================= -->
+    <section class="admin-section">
+      <h2>Classement</h2>
+
+      <div id="admin-classement-list"></div>
+
+      <h3>Ajouter un joueur</h3>
+      <input id="new-player-name" class="admin-input" placeholder="Nom du joueur" />
+      <input id="new-player-points" class="admin-input" placeholder="Points" type="number" />
+      <button class="btn" onclick="adminAddPlayer()">Ajouter</button>
+    </section>
+
+    <!-- ========================= -->
+    <!--   PENSÉE DE LA SEMAINE    -->
+    <!-- ========================= -->
+    <section class="admin-section">
+      <h2>Pensée de la semaine</h2>
+
+      <div id="admin-pensees-list"></div>
+
+      <button class="btn" onclick="adminSavePensees()">Enregistrer les pensées</button>
+    </section>
+
+  </main>
+
+</body>
+</html>
